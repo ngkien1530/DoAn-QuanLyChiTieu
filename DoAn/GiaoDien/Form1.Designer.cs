@@ -51,11 +51,12 @@
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel8 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Content = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -87,7 +88,7 @@
             this.ribbon1.QuickAcessToolbar.ToolTip = null;
             this.ribbon1.QuickAcessToolbar.ToolTipTitle = null;
             this.ribbon1.QuickAcessToolbar.Value = null;
-            this.ribbon1.Size = new System.Drawing.Size(388, 161);
+            this.ribbon1.Size = new System.Drawing.Size(467, 161);
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.ThuTab);
             this.ribbon1.Tabs.Add(this.ChiTab);
@@ -332,45 +333,55 @@
             this.ribbonButton8.ToolTipTitle = null;
             this.ribbonButton8.Value = null;
             // 
-            // listView1
+            // dataGridView3
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Location = new System.Drawing.Point(12, 167);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(364, 280);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_Time,
+            this.Column_Content,
+            this.Column_Cost,
+            this.Column_Note});
+            this.dataGridView3.Location = new System.Drawing.Point(13, 168);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(442, 279);
+            this.dataGridView3.TabIndex = 1;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // columnHeader1
+            // Column_Time
             // 
-            this.columnHeader1.Text = "Thời Gian";
+            this.Column_Time.HeaderText = "Thời gian";
+            this.Column_Time.Name = "Column_Time";
+            this.Column_Time.ReadOnly = true;
             // 
-            // columnHeader2
+            // Column_Content
             // 
-            this.columnHeader2.Text = "Loại Chi";
+            this.Column_Content.HeaderText = "Nội dung";
+            this.Column_Content.Name = "Column_Content";
+            this.Column_Content.ReadOnly = true;
             // 
-            // columnHeader3
+            // Column_Cost
             // 
-            this.columnHeader3.Text = "Số Tiền";
+            this.Column_Cost.HeaderText = "Số tiền";
+            this.Column_Cost.Name = "Column_Cost";
+            this.Column_Cost.ReadOnly = true;
             // 
-            // columnHeader4
+            // Column_Note
             // 
-            this.columnHeader4.Text = "Ghi Chú";
+            this.Column_Note.HeaderText = "Ghi chú";
+            this.Column_Note.Name = "Column_Note";
+            this.Column_Note.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(388, 459);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(467, 459);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.ribbon1);
             this.Name = "Form1";
             this.Text = "Money Savior";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,11 +410,11 @@
         private System.Windows.Forms.RibbonButton ribbonButton7;
         private System.Windows.Forms.RibbonPanel ribbonPanel8;
         private System.Windows.Forms.RibbonButton ribbonButton8;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Content;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Note;
     }
 }
 

@@ -39,7 +39,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="system.windows.forms.ribbon35">
-      <HintPath>..\..\..\..\..\..\..\..\system.windows.forms.ribbon35.dll</HintPath>
+      <HintPath>..\..\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DuLieu\DuLieuNguoiDung.cs" />
+    <Compile Include="DuLieu\DuLieuQuanLyThu.cs" />
     <Compile Include="GiaoDien\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +92,16 @@
     <Compile Include="DoiTuong\QuanLyThu.cs" />
     <Compile Include="DoiTuong\SoNo.cs" />
     <Compile Include="DoiTuong\SoThuNo.cs" />
-    <Compile Include="GiaoDien\ThemChi.cs">
+    <Compile Include="GiaoDien\QLChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien\ThemChi.Designer.cs">
-      <DependentUpon>ThemChi.cs</DependentUpon>
+    <Compile Include="GiaoDien\QLChi.Designer.cs">
+      <DependentUpon>QLChi.cs</DependentUpon>
     </Compile>
     <Compile Include="DoiTuong\ThongKe.cs" />
     <Compile Include="DuLieu\KetNoiSQL.cs" />
     <Compile Include="XuLy\XuLyDangNhap.cs" />
+    <Compile Include="XuLy\XuLyQuanLyThu.cs" />
     <EmbeddedResource Include="GiaoDien\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,8 +120,8 @@
     <EmbeddedResource Include="GiaoDien\QLThu.resx">
       <DependentUpon>QLThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoDien\ThemChi.resx">
-      <DependentUpon>ThemChi.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDien\QLChi.resx">
+      <DependentUpon>QLChi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

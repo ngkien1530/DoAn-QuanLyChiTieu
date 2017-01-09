@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ThemChi : Form
+    public partial class QLChi : Form
     {
-        public ThemChi()
+        public QLChi()
         {
             InitializeComponent();
         }

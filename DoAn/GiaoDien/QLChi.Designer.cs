@@ -1,6 +1,6 @@
 ﻿namespace DoAn
 {
-    partial class ThemChi
+    partial class QLChi
     {
         /// <summary>
         /// Required designer variable.
@@ -117,7 +117,7 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "VNĐ";
             // 
-            // ThemChi
+            // QLChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +132,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Name = "ThemChi";
+            this.Name = "QLChi";
             this.Text = "Quản Lý Chi";
             this.ResumeLayout(false);
             this.PerformLayout();
