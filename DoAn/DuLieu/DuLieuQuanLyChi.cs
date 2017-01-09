@@ -7,33 +7,33 @@ using System.Data.SqlClient;
 
 namespace DoAn.DuLieu
 {
-    class DuLieuQuanLyThu
+    class DuLieuQuanLyChi
     {
-        public List<DoiTuong.QuanLyThu> LoadQuanLyThu()
+        public List<DoiTuong.QuanLyChi> LoadQuanLyChi()
         {
             var KnSql = new DuLieu.KetNoiSQL();
             SqlConnection con = KnSql.con;
 
-            string querry = "select * from QuanLyThu";
+            string querry = "select * from QuanLyChi";
             SqlDataReader rdr = null;
             SqlCommand com = new SqlCommand(querry, con);
 
 
-            List<DoiTuong.QuanLyThu> listThu = new List<DoiTuong.QuanLyThu>();
+            List<DoiTuong.QuanLyChi> listChi = new List<DoiTuong.QuanLyChi>();
             try
             {
                 con.Open();
                 rdr = com.ExecuteReader();
-                while(rdr.Read())
+                while (rdr.Read())
                 {
-                    DoiTuong.QuanLyThu QLThu = new DoiTuong.QuanLyThu();
-                    QLThu.ID = (string)rdr["ID"];
-                    QLThu.NoiDung = (string)rdr["NoiDung"];
-                    QLThu.ThoiGian = (DateTime)rdr["ThoiGian"];
-                    QLThu.SoTien = (string)rdr["SoTien"];
-                    QLThu.GhiChu = (string)rdr["GhiChu"];
+                    DoiTuong.QuanLyChi QLChi = new DoiTuong.QuanLyChi();
+                    QLChi.ID = (string)rdr["ID"];
+                    QLChi.VatPham = (string)rdr["VatPham"];
+                    QLChi.ThoiGian = (DateTime)rdr["ThoiGian"];
+                    QLChi.SoTien = (string)rdr["SoTien"];
+                    QLChi.GhiChu = (string)rdr["GhiChu"];
 
-                    listThu.Add(QLThu);
+                    listChi.Add(QLChi);
                 }
             }
             finally
@@ -50,8 +50,7 @@ namespace DoAn.DuLieu
                     con.Close();
                 }
             }
-            return listThu;
+            return listChi;
         }
-
     }
 }

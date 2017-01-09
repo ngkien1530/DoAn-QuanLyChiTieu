@@ -8,6 +8,7 @@ namespace DoAn.DoiTuong
 {
     class QuanLy
     {
+        private string iD;
         private string soTien;
         private DateTime thoiGian;
         private string ghiChu;
@@ -25,6 +26,19 @@ namespace DoAn.DoiTuong
         {
             get { return ghiChu; }
             set { ghiChu = value; }
+        }
+
+        public string ID
+        {
+            get
+            {
+                return iD;
+            }
+
+            set
+            {
+                iD = value;
+            }
         }
     }
 }

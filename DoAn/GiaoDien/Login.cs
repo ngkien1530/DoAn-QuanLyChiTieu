@@ -22,13 +22,14 @@ namespace DoAn
         private void button1_Click(object sender, EventArgs e)
         {
             XuLy.XuLyDangNhap XLDN = new XuLy.XuLyDangNhap();
-
+            this.Hide();
             bool status = XLDN.DangNhap("K", "1");
             if(status == true)
             {
                 Form1 a = new Form1();
                 a.ShowDialog();
             }
+            this.Close();
         }
 
         private void Login_Load(object sender, EventArgs e)
